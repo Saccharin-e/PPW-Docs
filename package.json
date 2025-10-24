@@ -1,0 +1,20 @@
+{
+  "name": "ppw-docs",
+  "version": "1.0.0",
+  "description": "Tailwind CSS Components Documentation",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "keywords": [
+    "tailwindcss",
+    "components",
+    "documentation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

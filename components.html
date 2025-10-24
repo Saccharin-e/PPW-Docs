@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Components Documentation</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-blue-600">Tailwind Components</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#layouts" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Layouts</a>
+                    <a href="#buttons" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Buttons</a>
+                    <a href="#cards" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Cards</a>
+                    <a href="#forms" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Forms</a>
+                    <a href="#navigation" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Navigation</a>
+                    <a href="#modals" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Modals</a>
+                    <a href="#alerts" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Alerts</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold mb-4">Tailwind CSS Components</h1>
+            <p class="text-xl mb-8">A comprehensive collection of reusable UI components built with Tailwind CSS</p>
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Layouts Section -->
+        <section id="layouts" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Layouts</h2>
+            
+            <!-- Container Layout -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Container Layout</h3>
+                <p class="text-gray-600 mb-4">A responsive container that centers content with max-width constraints.</p>
+                <div class="component-preview mb-4">
+                    <div class="max-w-7xl mx-auto bg-blue-100 p-4 rounded">
+                        <p class="text-center">Content inside container</p>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"&gt;
+    &lt;!-- Your content --&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Grid Layout</h3>
+                <p class="text-gray-600 mb-4">Responsive grid system with 1, 2, 3, or 4 columns.</p>
+                <div class="component-preview mb-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-blue-500 text-white p-4 rounded text-center">Column 1</div>
+                        <div class="bg-blue-500 text-white p-4 rounded text-center">Column 2</div>
+                        <div class="bg-blue-500 text-white p-4 rounded text-center">Column 3</div>
+                        <div class="bg-blue-500 text-white p-4 rounded text-center">Column 4</div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"&gt;
+    &lt;div&gt;Column 1&lt;/div&gt;
+    &lt;div&gt;Column 2&lt;/div&gt;
+    &lt;div&gt;Column 3&lt;/div&gt;
+    &lt;div&gt;Column 4&lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Flexbox Layout -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Flexbox Layout</h3>
+                <p class="text-gray-600 mb-4">Flexible box layout for alignment and distribution.</p>
+                <div class="component-preview mb-4">
+                    <div class="flex justify-between items-center bg-gray-100 p-4 rounded">
+                        <div class="bg-green-500 text-white p-4 rounded">Left</div>
+                        <div class="bg-green-500 text-white p-4 rounded">Center</div>
+                        <div class="bg-green-500 text-white p-4 rounded">Right</div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="flex justify-between items-center"&gt;
+    &lt;div&gt;Left&lt;/div&gt;
+    &lt;div&gt;Center&lt;/div&gt;
+    &lt;div&gt;Right&lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons Section -->
+        <section id="buttons" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Buttons</h2>
+            
+            <!-- Primary Buttons -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Primary Buttons</h3>
+                <div class="component-preview mb-4">
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Primary</button>
+                        <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Success</button>
+                        <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Danger</button>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded">Warning</button>
+                        <button class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">Secondary</button>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"&gt;
+    Primary
+&lt;/button&gt;
+                </div>
+            </div>
+
+            <!-- Outline Buttons -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Outline Buttons</h3>
+                <div class="component-preview mb-4">
+                    <div class="flex flex-wrap gap-4">
+                        <button class="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-bold py-2 px-4 rounded">Primary</button>
+                        <button class="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded">Success</button>
+                        <button class="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-bold py-2 px-4 rounded">Danger</button>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;button class="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-bold py-2 px-4 rounded"&gt;
+    Outline
+&lt;/button&gt;
+                </div>
+            </div>
+
+            <!-- Button Sizes -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Button Sizes</h3>
+                <div class="component-preview mb-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded text-xs">Small</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Medium</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded text-lg">Large</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded text-xl">Extra Large</button>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;!-- Small --&gt;
+&lt;button class="bg-blue-500 text-white py-1 px-2 rounded text-xs"&gt;Small&lt;/button&gt;
+
+&lt;!-- Medium --&gt;
+&lt;button class="bg-blue-500 text-white py-2 px-4 rounded"&gt;Medium&lt;/button&gt;
+
+&lt;!-- Large --&gt;
+&lt;button class="bg-blue-500 text-white py-3 px-6 rounded text-lg"&gt;Large&lt;/button&gt;
+                </div>
+            </div>
+
+            <!-- Button Groups -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Button Groups</h3>
+                <div class="component-preview mb-4">
+                    <div class="inline-flex rounded-md shadow-sm" role="group">
+                        <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100">Left</button>
+                        <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100">Middle</button>
+                        <button class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-lg hover:bg-gray-100">Right</button>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="inline-flex rounded-md shadow-sm"&gt;
+    &lt;button class="px-4 py-2 bg-white border rounded-l-lg"&gt;Left&lt;/button&gt;
+    &lt;button class="px-4 py-2 bg-white border-t border-b"&gt;Middle&lt;/button&gt;
+    &lt;button class="px-4 py-2 bg-white border rounded-r-lg"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section id="cards" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Cards</h2>
+            
+            <!-- Basic Card -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Basic Card</h3>
+                <div class="component-preview mb-4">
+                    <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Card Title</h3>
+                        <p class="text-gray-600 mb-4">This is a simple card component with a title and description.</p>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Learn More</button>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="bg-white rounded-lg shadow-lg p-6"&gt;
+    &lt;h3 class="text-xl font-bold text-gray-900 mb-2"&gt;Card Title&lt;/h3&gt;
+    &lt;p class="text-gray-600 mb-4"&gt;Card description&lt;/p&gt;
+    &lt;button class="bg-blue-500 text-white py-2 px-4 rounded"&gt;Learn More&lt;/button&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Image Card -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Image Card</h3>
+                <div class="component-preview mb-4">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-sm">
+                        <div class="bg-gradient-to-r from-purple-400 to-pink-500 h-48"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Image Card</h3>
+                            <p class="text-gray-600 mb-4">A card with an image header and content below.</p>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="bg-white rounded-lg shadow-lg overflow-hidden"&gt;
+    &lt;img src="image.jpg" alt="Card image" class="w-full h-48 object-cover"&gt;
+    &lt;div class="p-6"&gt;
+        &lt;h3 class="text-xl font-bold mb-2"&gt;Image Card&lt;/h3&gt;
+        &lt;p class="text-gray-600 mb-4"&gt;Card description&lt;/p&gt;
+        &lt;button class="bg-blue-500 text-white py-2 px-4 rounded"&gt;View Details&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Profile Card</h3>
+                <div class="component-preview mb-4">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-sm">
+                        <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-32"></div>
+                        <div class="px-6 pb-6">
+                            <div class="flex justify-center -mt-16 mb-4">
+                                <div class="w-32 h-32 bg-gray-300 rounded-full border-4 border-white flex items-center justify-center text-4xl font-bold text-gray-600">JD</div>
+                            </div>
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold text-gray-900">John Doe</h3>
+                                <p class="text-gray-600 mb-4">Full Stack Developer</p>
+                                <div class="flex justify-center space-x-2">
+                                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Follow</button>
+                                    <button class="border-2 border-gray-300 hover:bg-gray-100 text-gray-700 font-bold py-2 px-4 rounded">Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="bg-white rounded-lg shadow-lg overflow-hidden"&gt;
+    &lt;div class="bg-gradient-to-r from-blue-500 to-purple-600 h-32"&gt;&lt;/div&gt;
+    &lt;div class="px-6 pb-6"&gt;
+        &lt;div class="flex justify-center -mt-16 mb-4"&gt;
+            &lt;img src="avatar.jpg" class="w-32 h-32 rounded-full border-4 border-white"&gt;
+        &lt;/div&gt;
+        &lt;div class="text-center"&gt;
+            &lt;h3 class="text-2xl font-bold"&gt;John Doe&lt;/h3&gt;
+            &lt;p class="text-gray-600 mb-4"&gt;Full Stack Developer&lt;/p&gt;
+            &lt;button class="bg-blue-500 text-white py-2 px-4 rounded"&gt;Follow&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Pricing Card -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Pricing Card</h3>
+                <div class="component-preview mb-4">
+                    <div class="bg-white rounded-lg shadow-lg p-8 max-w-sm text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Pro Plan</h3>
+                        <div class="text-5xl font-bold text-blue-600 mb-2">$29<span class="text-xl text-gray-600">/mo</span></div>
+                        <p class="text-gray-600 mb-6">Perfect for professionals</p>
+                        <ul class="text-left mb-6 space-y-2">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Unlimited projects</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Priority support</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Advanced analytics</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Team collaboration</li>
+                        </ul>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg">Get Started</button>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="bg-white rounded-lg shadow-lg p-8 text-center"&gt;
+    &lt;h3 class="text-2xl font-bold mb-2"&gt;Pro Plan&lt;/h3&gt;
+    &lt;div class="text-5xl font-bold text-blue-600"&gt;$29&lt;span class="text-xl"&gt;/mo&lt;/span&gt;&lt;/div&gt;
+    &lt;ul class="text-left mb-6"&gt;
+        &lt;li&gt;✓ Feature 1&lt;/li&gt;
+        &lt;li&gt;✓ Feature 2&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;button class="w-full bg-blue-500 text-white py-3 px-6 rounded-lg"&gt;Get Started&lt;/button&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section id="forms" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Forms</h2>
+            
+            <!-- Basic Form -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Basic Form</h3>
+                <div class="component-preview mb-4">
+                    <form class="bg-white rounded-lg shadow-lg p-6 max-w-md">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" id="name" type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" id="email" type="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" id="password" type="password" placeholder="******************">
+                        </div>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Sign In</button>
+                    </form>
+                </div>
+                <div class="code-block">
+&lt;form class="bg-white rounded-lg shadow-lg p-6"&gt;
+    &lt;div class="mb-4"&gt;
+        &lt;label class="block text-gray-700 text-sm font-bold mb-2"&gt;Name&lt;/label&gt;
+        &lt;input class="shadow border rounded w-full py-2 px-3 focus:ring-2 focus:ring-blue-500" type="text"&gt;
+    &lt;/div&gt;
+    &lt;button class="w-full bg-blue-500 text-white py-2 px-4 rounded" type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+                </div>
+            </div>
+
+            <!-- Select and Textarea -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Select & Textarea</h3>
+                <div class="component-preview mb-4">
+                    <form class="bg-white rounded-lg shadow-lg p-6 max-w-md space-y-4">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Country</label>
+                            <select class="shadow border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>Select a country</option>
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>United Kingdom</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                            <textarea class="shadow border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" placeholder="Enter your message"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="code-block">
+&lt;select class="shadow border rounded w-full py-2 px-3 focus:ring-2 focus:ring-blue-500"&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+    &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;textarea class="shadow border rounded w-full py-2 px-3 focus:ring-2 focus:ring-blue-500" rows="4"&gt;&lt;/textarea&gt;
+                </div>
+            </div>
+
+            <!-- Checkboxes and Radio Buttons -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Checkboxes & Radio Buttons</h3>
+                <div class="component-preview mb-4">
+                    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md space-y-6">
+                        <div>
+                            <p class="text-gray-700 font-bold mb-3">Checkboxes</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Option 1</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Option 2</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 font-bold mb-3">Radio Buttons</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="radio" class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Choice 1</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="radio" class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500">
+                                    <span class="ml-2 text-gray-700">Choice 2</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;!-- Checkbox --&gt;
+&lt;label class="flex items-center"&gt;
+    &lt;input type="checkbox" class="w-4 h-4 text-blue-600 rounded"&gt;
+    &lt;span class="ml-2"&gt;Option&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;!-- Radio --&gt;
+&lt;label class="flex items-center"&gt;
+    &lt;input type="radio" name="group" class="w-4 h-4 text-blue-600"&gt;
+    &lt;span class="ml-2"&gt;Choice&lt;/span&gt;
+&lt;/label&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Section -->
+        <section id="navigation" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Navigation</h2>
+            
+            <!-- Horizontal Navigation -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Horizontal Navigation</h3>
+                <div class="component-preview mb-4">
+                    <nav class="bg-gray-800 rounded-lg">
+                        <div class="px-4">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white px-3 py-4 text-sm font-medium hover:bg-gray-700">Home</a>
+                                <a href="#" class="text-gray-300 px-3 py-4 text-sm font-medium hover:bg-gray-700 hover:text-white">About</a>
+                                <a href="#" class="text-gray-300 px-3 py-4 text-sm font-medium hover:bg-gray-700 hover:text-white">Services</a>
+                                <a href="#" class="text-gray-300 px-3 py-4 text-sm font-medium hover:bg-gray-700 hover:text-white">Contact</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="code-block">
+&lt;nav class="bg-gray-800"&gt;
+    &lt;div class="flex space-x-4"&gt;
+        &lt;a href="#" class="text-white px-3 py-4 hover:bg-gray-700"&gt;Home&lt;/a&gt;
+        &lt;a href="#" class="text-gray-300 px-3 py-4 hover:text-white"&gt;About&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+                </div>
+            </div>
+
+            <!-- Breadcrumbs -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Breadcrumbs</h3>
+                <div class="component-preview mb-4">
+                    <nav class="flex" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center">
+                                <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="mx-2 text-gray-400">/</span>
+                                    <a href="#" class="text-gray-700 hover:text-blue-600">Components</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <span class="mx-2 text-gray-400">/</span>
+                                    <span class="text-gray-500">Navigation</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="code-block">
+&lt;nav class="flex"&gt;
+    &lt;ol class="inline-flex items-center space-x-1"&gt;
+        &lt;li&gt;&lt;a href="#" class="text-gray-700 hover:text-blue-600"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span class="mx-2"&gt;/&lt;/span&gt;&lt;a href="#"&gt;Page&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tabs</h3>
+                <div class="component-preview mb-4">
+                    <div class="bg-white rounded-lg shadow-lg p-4">
+                        <div class="border-b border-gray-200">
+                            <nav class="flex space-x-8" aria-label="Tabs">
+                                <a href="#" class="border-b-2 border-blue-500 py-4 px-1 text-sm font-medium text-blue-600">Tab 1</a>
+                                <a href="#" class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Tab 2</a>
+                                <a href="#" class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">Tab 3</a>
+                            </nav>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-600">Tab content goes here...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="border-b border-gray-200"&gt;
+    &lt;nav class="flex space-x-8"&gt;
+        &lt;a href="#" class="border-b-2 border-blue-500 py-4 text-blue-600"&gt;Tab 1&lt;/a&gt;
+        &lt;a href="#" class="border-b-2 border-transparent py-4 hover:border-gray-300"&gt;Tab 2&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Pagination</h3>
+                <div class="component-preview mb-4">
+                    <nav class="flex justify-center">
+                        <ul class="inline-flex items-center -space-x-px">
+                            <li>
+                                <a href="#" class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100">Previous</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100">1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 leading-tight text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100">2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100">3</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="code-block">
+&lt;nav class="flex justify-center"&gt;
+    &lt;ul class="inline-flex items-center -space-x-px"&gt;
+        &lt;li&gt;&lt;a href="#" class="px-3 py-2 border rounded-l-lg"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="px-3 py-2 border"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="px-3 py-2 border rounded-r-lg"&gt;Next&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals Section -->
+        <section id="modals" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Modals</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Basic Modal</h3>
+                <p class="text-gray-600 mb-4">Click the button to see a modal example.</p>
+                <div class="component-preview mb-4">
+                    <button onclick="document.getElementById('modal1').classList.remove('hidden')" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Open Modal</button>
+                    
+                    <!-- Modal -->
+                    <div id="modal1" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+                        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+                            <div class="mt-3">
+                                <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Modal Title</h3>
+                                <div class="mt-2 px-7 py-3">
+                                    <p class="text-sm text-gray-500">This is a simple modal dialog. You can put any content here.</p>
+                                </div>
+                                <div class="flex justify-end gap-4 mt-4">
+                                    <button onclick="document.getElementById('modal1').classList.add('hidden')" class="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600">Close</button>
+                                    <button onclick="document.getElementById('modal1').classList.add('hidden')" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;!-- Modal Trigger --&gt;
+&lt;button onclick="openModal()"&gt;Open Modal&lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div id="modal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-50"&gt;
+    &lt;div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"&gt;
+        &lt;h3 class="text-lg font-medium"&gt;Modal Title&lt;/h3&gt;
+        &lt;p class="text-sm text-gray-500"&gt;Modal content&lt;/p&gt;
+        &lt;button onclick="closeModal()"&gt;Close&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts Section -->
+        <section id="alerts" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Alerts</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Alert Styles</h3>
+                <div class="component-preview mb-4">
+                    <div class="space-y-4">
+                        <!-- Success Alert -->
+                        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                            <strong class="font-bold">Success!</strong>
+                            <span class="block sm:inline"> Your operation was completed successfully.</span>
+                        </div>
+                        
+                        <!-- Info Alert -->
+                        <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative" role="alert">
+                            <strong class="font-bold">Info!</strong>
+                            <span class="block sm:inline"> Here's some information you should know.</span>
+                        </div>
+                        
+                        <!-- Warning Alert -->
+                        <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded relative" role="alert">
+                            <strong class="font-bold">Warning!</strong>
+                            <span class="block sm:inline"> Please be careful with this action.</span>
+                        </div>
+                        
+                        <!-- Error Alert -->
+                        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                            <strong class="font-bold">Error!</strong>
+                            <span class="block sm:inline"> Something went wrong.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;!-- Success --&gt;
+&lt;div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded"&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; Your message here.
+&lt;/div&gt;
+
+&lt;!-- Error --&gt;
+&lt;div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"&gt;
+    &lt;strong&gt;Error!&lt;/strong&gt; Your message here.
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Dismissible Alerts -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Dismissible Alerts</h3>
+                <div class="component-preview mb-4">
+                    <div id="dismissAlert" class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative flex justify-between items-center" role="alert">
+                        <div>
+                            <strong class="font-bold">Dismissible Alert!</strong>
+                            <span class="block sm:inline"> Click the X to dismiss this alert.</span>
+                        </div>
+                        <button onclick="document.getElementById('dismissAlert').remove()" class="text-blue-700 hover:text-blue-900">
+                            <svg class="fill-current h-6 w-6" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded flex justify-between"&gt;
+    &lt;div&gt;&lt;strong&gt;Alert!&lt;/strong&gt; Message here.&lt;/div&gt;
+    &lt;button onclick="this.parentElement.remove()"&gt;×&lt;/button&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Badges Section -->
+        <section id="badges" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Badges</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Badge Variations</h3>
+                <div class="component-preview mb-4">
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Default</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded">Secondary</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Success</span>
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Danger</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Warning</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">Info</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Purple</span>
+                        <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-2.5 py-0.5 rounded">Pink</span>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded"&gt;Badge&lt;/span&gt;
+                </div>
+            </div>
+
+            <!-- Pill Badges -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Pill Badges</h3>
+                <div class="component-preview mb-4">
+                    <div class="flex flex-wrap gap-2 items-center">
+                        <span class="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">New</span>
+                        <span class="bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Active</span>
+                        <span class="bg-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Pending</span>
+                        <span class="bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Closed</span>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;span class="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full"&gt;Pill Badge&lt;/span&gt;
+                </div>
+            </div>
+
+            <!-- Badges with Icons -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Badges with Count</h3>
+                <div class="component-preview mb-4">
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <button class="relative bg-blue-500 text-white font-bold py-2 px-4 rounded">
+                            Messages
+                            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">5</span>
+                        </button>
+                        <button class="relative bg-green-500 text-white font-bold py-2 px-4 rounded">
+                            Notifications
+                            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">12</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;button class="relative bg-blue-500 text-white py-2 px-4 rounded"&gt;
+    Messages
+    &lt;span class="absolute -top-2 -right-2 bg-red-500 text-xs px-2 py-1 rounded-full"&gt;5&lt;/span&gt;
+&lt;/button&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Spinners Section -->
+        <section id="spinners" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Spinners & Loaders</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Loading Spinners</h3>
+                <div class="component-preview mb-4">
+                    <div class="flex flex-wrap gap-8 items-center">
+                        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+                        <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-green-500"></div>
+                        <div class="animate-pulse flex space-x-2">
+                            <div class="h-3 w-3 bg-blue-500 rounded-full"></div>
+                            <div class="h-3 w-3 bg-blue-500 rounded-full"></div>
+                            <div class="h-3 w-3 bg-blue-500 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;!-- Spinner --&gt;
+&lt;div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"&gt;&lt;/div&gt;
+
+&lt;!-- Dots --&gt;
+&lt;div class="animate-pulse flex space-x-2"&gt;
+    &lt;div class="h-3 w-3 bg-blue-500 rounded-full"&gt;&lt;/div&gt;
+    &lt;div class="h-3 w-3 bg-blue-500 rounded-full"&gt;&lt;/div&gt;
+    &lt;div class="h-3 w-3 bg-blue-500 rounded-full"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Bars Section -->
+        <section id="progress" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Progress Bars</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Basic Progress Bars</h3>
+                <div class="component-preview mb-4">
+                    <div class="space-y-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"></div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="bg-green-600 h-4 rounded-full" style="width: 70%"></div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-6">
+                            <div class="bg-purple-600 h-6 rounded-full flex items-center justify-center text-xs text-white" style="width: 85%">85%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;div class="w-full bg-gray-200 rounded-full h-2.5"&gt;
+    &lt;div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Tables Section -->
+        <section id="tables" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Tables</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Basic Table</h3>
+                <div class="component-preview mb-4">
+                    <div class="overflow-x-auto bg-white rounded-lg shadow">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">John Doe</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">john@example.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Admin</td>
+                                    <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Jane Smith</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">jane@example.com</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">User</td>
+                                    <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="code-block">
+&lt;table class="min-w-full divide-y divide-gray-200"&gt;
+    &lt;thead class="bg-gray-50"&gt;
+        &lt;tr&gt;
+            &lt;th class="px-6 py-3 text-left text-xs font-medium uppercase"&gt;Name&lt;/th&gt;
+            &lt;th class="px-6 py-3 text-left text-xs font-medium uppercase"&gt;Email&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody class="bg-white divide-y divide-gray-200"&gt;
+        &lt;tr&gt;
+            &lt;td class="px-6 py-4"&gt;John Doe&lt;/td&gt;
+            &lt;td class="px-6 py-4"&gt;john@example.com&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Tailwind CSS Components</h3>
+                <p class="text-gray-400 mb-4">Built with ❤️ using Tailwind CSS</p>
+                <p class="text-gray-500 text-sm">© 2025 All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
